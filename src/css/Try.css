@@ -1,0 +1,7 @@
+#try
+{
+    font-size: 30px;
+    border-radius: 2px;
+    background-color: var(--red);
+    padding: 20px;
+}

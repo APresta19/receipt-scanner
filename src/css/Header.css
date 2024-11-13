@@ -1,0 +1,25 @@
+.container
+{
+    background-color: var(--red);
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+div.header-left
+{
+    margin-right: auto;
+}
+.header-right
+{
+    display: flex;
+    gap: 30px;
+    cursor: pointer;
+}
+.header-right h2
+{
+    transition: color 0.3s ease-in;
+}
+.header-right h2:hover
+{
+    color: white;
+}
