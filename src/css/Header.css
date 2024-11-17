@@ -1,9 +1,10 @@
 .container
 {
-    background-color: var(--red);
+    background-color: var(--primary);
     display: flex;
     justify-content: flex-end;
     align-items: center;
+    padding: 10px 20px;
 }
 div.header-left
 {

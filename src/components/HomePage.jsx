@@ -1,5 +1,6 @@
 import Header from './Header'
 import Footer from './Footer'
+import Welcome from './Welcome'
 
 function HomePage()
 {
@@ -7,9 +8,9 @@ function HomePage()
         <>
             <Header />
             <main>
-                Content
+                <Welcome />
             </main>
-            <Footer />
+            {/*<Footer />*/}
         </>
     );
 }
