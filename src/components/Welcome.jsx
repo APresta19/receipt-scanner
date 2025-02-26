@@ -1,5 +1,5 @@
 import '../css/Welcome.css';
-import qrImage from '../images/frame.png';
+import qrImage from '../images/ReceiptImg.png';
 
 function Welcome()
 {
@@ -8,11 +8,11 @@ function Welcome()
         <div className="welcome">
             <div id="welcome-left">
                 <div id="logo">Logo</div>
-                <div id="title">Receipt Scanner</div>
+                <div id="title">Receipt Tracker</div>
                 <div id="learn-button"><button className="button-secondary-lg">Learn More</button></div>
             </div>
             <div id="welcome-right">
-                <img src={qrImage} id="qr-image" alt="QR Image" />
+                <img src={qrImage} id="qr-image" alt="QR Image" width="500" height="300"/>
             </div>
             
         </div>

@@ -1,50 +1,201 @@
 .button-primary-lg
 {
   background-color: var(--primary);
-  border: 1px double var(--secondary);
+  border: 1px double var(--tertiary);
   font-size: 32px;
   border-radius: 20px;
   padding: 15px;
+  box-shadow: 8px 10px 35px rgba(0, 0, 0, .3);
+
+  transition: transform .3s ease-out;
+
+  position: relative; /* screen glitches without it */
+  overflow: hidden; /* makes rectangle work with border radius */
+  display: inline-block;
+  z-index: 1;
+}
+.button-primary-lg:hover
+{
+  transform: scale(1.05);
+}
+/* creates a "loading bar" animation */
+.button-primary-lg::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  background-color: var(--tertiary);
+  transition: width 0.5s ease;
+  z-index: -1;
+}
+
+.button-secondary-lg:hover::before {
+  width: 100%; /* On hover, fill the width of the button */
 }
 .button-secondary-lg
 {
   background-color: var(--secondary);
-  border: 1px double var(--primary);
+  border: 1px double var(--tertiary);
+  color: var(--primary);
   font-size: 32px;
   border-radius: 20px;
   padding: 15px;
+  transition: transform .3s ease-out;
+  box-shadow: 8px 10px 35px rgba(0, 0, 0, .3);
+
+  position: relative; /* screen glitches without it */
+  overflow: hidden; /* makes rectangle work with border radius */
+  display: inline-block;
+  z-index: 1;
+}
+.button-secondary-lg:hover
+{
+  transform: scale(1.05);
+}
+.button-secondary-lg::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  background-color: var(--tertiary);
+  transition: width 0.5s ease;
+  z-index: -1;
+}
+
+.button-secondary-lg:hover::before {
+  width: 100%; /* On hover, fill the width of the button */
 }
 .button-primary-med
 {
   background-color: var(--primary);
-  border: 1px double var(--secondary);
+  border: 1px double var(--tertiary);
   font-size: 16px;
   border-radius: 20px;
   padding: 10px;
+  box-shadow: 8px 10px 35px rgba(0, 0, 0, .3);
+
+  transition: transform .3s ease-out;
+  transition: background-color .3s ease-out;
+
+  position: relative; /* screen glitches without it */
+  overflow: hidden; /* makes rectangle work with border radius */
+  display: inline-block;
+  z-index: 1;
+}
+.button-primary-med:hover
+{
+  transform: scale(1.05);
+}
+.button-primary-med::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  background-color: var(--tertiary);
+  transition: width 0.5s ease;
+  z-index: -1;
 }
 .button-secondary-med
 {
   background-color: var(--secondary);
-  border: 1px double var(--primary);
+  border: 1px double var(--tertiary);
   font-size: 16px;
   border-radius: 20px;
   padding: 10px;
+  box-shadow: 8px 10px 35px rgba(0, 0, 0, .3);
+
+  transition: transform .3s ease-out;
+  transition: background-color .3s ease-out;
+
+  position: relative; /* screen glitches without it */
+  overflow: hidden; /* makes rectangle work with border radius */
+  display: inline-block;
+  z-index: 1;
+}
+.button-secondary-med:hover
+{
+  transform: scale(1.05);
+}
+.button-secondary-med::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  background-color: var(--tertiary);
+  transition: width 0.5s ease;
+  z-index: -1;
 }
 .button-primary-sm
 {
   background-color: var(--primary);
-  border: 1px double var(--secondary);
+  border: 1px double var(--tertiary);
   font-size: 10px;
   border-radius: 20px;
   padding: 5px;
+  box-shadow: 8px 10px 35px rgba(0, 0, 0, .3);
+
+  transition: transform .3s ease-out;
+  transition: background-color .3s ease-out;
+
+  position: relative; /* screen glitches without it */
+  overflow: hidden; /* makes rectangle work with border radius */
+  display: inline-block;
+  z-index: 1;
+}
+.button-primary-sm:hover
+{
+  transform: scale(1.05);
+}
+.button-primary-sm::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  background-color: var(--tertiary);
+  transition: width 0.5s ease;
+  z-index: -1;
 }
 .button-secondary-sm
 {
   background-color: var(--secondary);
-  border: 1px double var(--primary);
+  border: 1px double var(--tertiary);
   font-size: 10px;
   border-radius: 20px;
   padding: 5px;
+  box-shadow: 8px 10px 35px rgba(0, 0, 0, .3);
+
+  transition: transform .3s ease-out;
+  transition: background-color .3s ease-out;
+
+  position: relative; /* screen glitches without it */
+  overflow: hidden; /* makes rectangle work with border radius */
+  display: inline-block;
+  z-index: 1;
+}
+.button-secondary-sm:hover
+{
+  transform: scale(1.05);
+}
+.button-secondary-sm::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  background-color: var(--tertiary);
+  transition: width 0.5s ease;
+  z-index: -1;
 }
 
 *
@@ -54,9 +205,10 @@
 :root {
   --white: #DDDDDD;
   --darker: #222831;
-  --secondary: #30475E;
+  --secondary: #DDDDDD;
   --red: #F05454;
   --primary: #F05454;
+  --tertiary: #222831;
 }
 body, html
 {

@@ -1,11 +1,13 @@
-const { Pool } = require("pg");
+import pkg from 'pg';
+const { Pool } = pkg;
 
 // All of the following properties should be read from environment variables
 // Hardcoding them here for testing
-module.exports = new Pool({
-    host: "localhost",
+const thepool = new Pool({
+    host: "127.0.0.1",
     user: "andrew",
-    database: "top_users",
+    database: "receipt",
     password: "february19",
     port: 5432
 });
+export default thepool;
