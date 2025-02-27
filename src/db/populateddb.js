@@ -16,9 +16,10 @@ const SQL =
 `;
 async function main() {
     console.log("seeding...");
-    const client = new Client({
-        connectionString: "postgresql://andrew:february19@localhost:5432/top_users",
-    });
+    // hiding for security purposes (will use env vars) 
+    /*const client = new Client({
+        connectionString: "",
+    });*/
     await client.connect();
     await client.query(SQL);
     await client.end();
